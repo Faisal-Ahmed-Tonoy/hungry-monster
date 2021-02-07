@@ -4,7 +4,14 @@ document.getElementById('search-button').addEventListener('click', function() {
     fetch(Url)
         .then(response => response.json())
         .then(data => displayMeal(data.meals))
+        .catch(function() {
+            alert("Your Desired Food is not available");
+        });
+
+
+
 })
+
 
 const displayMeal = meal => {
     const menusDiv = document.getElementById('menuDiv');
@@ -23,9 +30,20 @@ const displayMeal = meal => {
         menusDiv.appendChild(menuDiv);
 
 
+
+
+
+
+
     });
 
+
 }
+
+
+
+
+
 const displayMenuDetail = names => {
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${names}`
     fetch(url)
@@ -38,19 +56,18 @@ const renderMenuInfo = menu => {
     const menuDiv = document.getElementById('menuDetail');
     menuDiv.innerHTML = ` 
     <img src="${menu.strMealThumb}">
-  
-    <h1>${menu.strMeal}</h1>
-    
-    
-    <h3>Ingredients</h3>
-    <p>${menu.strIngredient1}</p>
+  <h1>${menu.strMeal}</h1>
+<h3>Ingredients</h3>
+<p>${menu.strIngredient1}</p>
     <p>${menu.strIngredient2}</p>
-    <p>${menu.strIngredient3}</p>
-    <p>${menu.strIngredient4}</p>
-    <p>${menu.strIngredient5}</p>
-    <p>${menu.strIngredient6}</p>
-    
-    `
+     <p>${menu.strIngredient3}</p>
+     <p>${menu.strIngredient4}</p>
+     <p>${menu.strIngredient5}</p>
+     <p>${menu.strIngredient6}</p>
+     
+`
+
+
 
 
 
