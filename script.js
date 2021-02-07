@@ -7,26 +7,20 @@ document.getElementById('search-button').addEventListener('click', function() {
 })
 
 const displayMeal = meal => {
-        const menusDiv = document.getElementById('menuDiv');
-        meal.forEach(meals => {
-            const menuDiv = document.createElement('div');
-            menuDiv.className = 'menu-item';
-            const menuIfo = `
+    const menusDiv = document.getElementById('menuDiv');
+    meal.forEach(meals => {
+        const menuDiv = document.createElement('div');
+
+        menuDiv.className = 'menu-item';
+        const menuIfo = `
             <img src="${meals.strMealThumb}">
          <h3 class='food-detail' >${meals.strMeal}</h3> `
-            menuDiv.innerHTML = menuIfo;
-            menusDiv.appendChild(menuDiv);
+        menuDiv.innerHTML = menuIfo;
+        menusDiv.appendChild(menuDiv);
 
-        });
+
+    });
+    menuDiv.onclick = function() {
+        alert("hello");
     }
-    // for (let i = 0; i < meal.length; i++) {
-    //     const meals = meal[i];
-
-//     
-
-// const foodName = document.createElement('h3');
-// foodName.innerText = meals.strMeal;
-// menuDiv.appendChild(foodName);
-
-
-//  console.log(meals.strMeal);
+}

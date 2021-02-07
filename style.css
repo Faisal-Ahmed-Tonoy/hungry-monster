@@ -28,7 +28,7 @@ body {
     color: #aaa;
 }
 
-.menu-item {
+#menu-item {
     padding: 1px;
     text-align: center;
     width: 270px;
