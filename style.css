@@ -54,3 +54,8 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
 }
+
+#error {
+    height: 100%;
+    width: 100%;
+}
