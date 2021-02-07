@@ -16,7 +16,7 @@ document.getElementById('search-button').addEventListener('click', function() {
 
 
 const displayMeal = meal => {
-    const menusDiv = document.getElementById('menuDiv');
+    const foodDiv = document.getElementById('menuDiv');
     meal.forEach(meals => {
         const menuDiv = document.createElement('div');
 
@@ -29,22 +29,12 @@ const displayMeal = meal => {
          
         `
         menuDiv.innerHTML = menuIfo;
-        menusDiv.appendChild(menuDiv);
-
-
-
-
-
-
+        foodDiv.appendChild(menuDiv);
 
     });
 
 
 }
-
-
-
-
 
 const displayMenuDetail = names => {
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${names}`
@@ -68,9 +58,4 @@ const renderMenuInfo = menu => {
      <p>${menu.strIngredient6}</p>
      
 `
-
-
-
-
-
 }
