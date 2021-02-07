@@ -11,13 +11,20 @@ const displayMeal = meal => {
     for (let i = 0; i < meal.length; i++) {
         const meals = meal[i];
         const menuDiv = document.createElement('div');
-        const foodName = document.createElement('h3');
-        foodName.innerText = meals.strMeal;
-        menuDiv.appendChild(foodName);
-        menusDiv.appendChild(menuDiv);
+        menuDiv.className = 'menu-item';
+
+        // const foodName = document.createElement('h3');
+        // foodName.innerText = meals.strMeal;
+        // menuDiv.appendChild(foodName);
+
 
         //  console.log(meals.strMeal);
 
+
+        const menuIfo = `
+        <h3 class='food-detail' >${meals.strMeal}</h3> `
+        menuDiv.innerHTML = menuIfo;
+        menusDiv.appendChild(menuDiv);
 
 
     }
