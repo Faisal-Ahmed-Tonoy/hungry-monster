@@ -12,15 +12,20 @@ const displayMeal = meal => {
         const menuDiv = document.createElement('div');
 
         menuDiv.className = 'menu-item';
-        const menuIfo = `
-            <img src="${meals.strMealThumb}">
-         <h3 class='food-detail' >${meals.strMeal}</h3> `
+        const menuIfo = ` 
+         
+            <img src="${meals.strMealThumb}" onclick="displayMenuDetail('${meals.strMeal}')">
+         <h3 class='food-detail' >${meals.strMeal}</h3>
+         
+         
+        `
         menuDiv.innerHTML = menuIfo;
         menusDiv.appendChild(menuDiv);
 
 
     });
-    menuDiv.onclick = function() {
-        alert("hello");
-    }
+
+}
+const displayMenuDetail = names => {
+    console.log(names);
 }
