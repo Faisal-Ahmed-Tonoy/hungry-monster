@@ -1,6 +1,6 @@
 document.getElementById('search-button').addEventListener('click', function() {
     const mealInput = document.getElementById("meal-input").value;
-    const Url = (`https://www.themealdb.com/api/json/v1/1/search.php?s=${mealInput}`)
+    const Url = (`https://www.themealdb.com/api/json/v1/1/search.php?f=${mealInput}`)
     fetch(Url)
         .then(response => response.json())
         .then(data => displayMeal(data.meals))
@@ -9,7 +9,7 @@ document.getElementById('search-button').addEventListener('click', function() {
 const displayMeal = meal => {
     for (let i = 0; i < meal.length; i++) {
         const meals = meal[i];
-        console.log(meals.strCategory);
+        console.log(meals.strMeal);
 
 
 
