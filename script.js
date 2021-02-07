@@ -8,9 +8,7 @@ document.getElementById('search-button').addEventListener('click', function() {
             alert(" Sorry,this item is not include in our menu!");
 
 
-
         });
-
 
 
 })
