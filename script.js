@@ -12,6 +12,7 @@ const displayMeal = meal => {
             const menuDiv = document.createElement('div');
             menuDiv.className = 'menu-item';
             const menuIfo = `
+            <img src="${meals.strMealThumb}">
          <h3 class='food-detail' >${meals.strMeal}</h3> `
             menuDiv.innerHTML = menuIfo;
             menusDiv.appendChild(menuDiv);
