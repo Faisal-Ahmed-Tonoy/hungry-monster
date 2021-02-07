@@ -27,14 +27,30 @@ const displayMeal = meal => {
 
 }
 const displayMenuDetail = names => {
-    const url = `https://www.themealdb.com/api/json/v1/1/list.php?i=${names}`
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${names}`
     fetch(url)
         .then(res => res.json())
-        .then(data => renderMenuInfo(data.meals));
+        .then(data => renderMenuInfo(data.meals[0]));
+
 }
 const renderMenuInfo = menu => {
     console.log(menu);
-    const menuDiv = document.getElementById('menu-detail');
+    const menuDiv = document.getElementById('menuDetail');
+    menuDiv.innerHTML = ` 
+    <img src="${menu.strMealThumb}">
+  
+    <h1>${menu.strMeal}</h1>
+    
+    
+    <h3>Ingredients</h3>
+    <p>${menu.strIngredient1}</p>
+    <p>${menu.strIngredient2}</p>
+    <p>${menu.strIngredient3}</p>
+    <p>${menu.strIngredient4}</p>
+    <p>${menu.strIngredient5}</p>
+    <p>${menu.strIngredient6}</p>
+    
+    `
 
 
 
