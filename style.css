@@ -28,7 +28,7 @@ body {
     color: #aaa;
 }
 
-#menu-item {
+.menu-item {
     padding: 1px;
     text-align: center;
     width: 270px;
@@ -40,6 +40,7 @@ body {
 
 #menuDiv img {
     width: 100%;
+    border-radius: 14px;
 }
 
 .food-detail {
@@ -47,15 +48,13 @@ body {
     color: #040404;
     padding: 10px;
     text-align: center;
+    font-weight: 700;
 }
 
 #menuDiv {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
+    grid-gap: 18px;
 }
 
-#error {
-    height: 100%;
-    width: 100%;
-}
+#menuDetail {}
