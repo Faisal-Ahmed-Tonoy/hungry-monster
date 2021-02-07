@@ -7,9 +7,16 @@ document.getElementById('search-button').addEventListener('click', function() {
 })
 
 const displayMeal = meal => {
+    const menusDiv = document.getElementById('menuDiv');
     for (let i = 0; i < meal.length; i++) {
         const meals = meal[i];
-        console.log(meals.strMeal);
+        const menuDiv = document.createElement('div');
+        const foodName = document.createElement('h3');
+        foodName.innerText = meals.strMeal;
+        menuDiv.appendChild(foodName);
+        menusDiv.appendChild(menuDiv);
+
+        //  console.log(meals.strMeal);
 
 
 
