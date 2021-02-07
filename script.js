@@ -27,5 +27,15 @@ const displayMeal = meal => {
 
 }
 const displayMenuDetail = names => {
-    console.log(names);
+    const url = `https://www.themealdb.com/api/json/v1/1/list.php?i=${names}`
+    fetch(url)
+        .then(res => res.json())
+        .then(data => renderMenuInfo(data.meals));
+}
+const renderMenuInfo = menu => {
+    console.log(menu);
+    const menuDiv = document.getElementById('menu-detail');
+
+
+
 }
