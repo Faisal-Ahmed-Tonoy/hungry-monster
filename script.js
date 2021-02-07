@@ -5,7 +5,7 @@ document.getElementById('search-button').addEventListener('click', function() {
         .then(response => response.json())
         .then(data => displayMeal(data.meals))
         .catch(function() {
-            alert(" Sorry,this item is not include in our menu!");
+            alert(" Sorry,this item is not included in our menu!");
 
 
         });
