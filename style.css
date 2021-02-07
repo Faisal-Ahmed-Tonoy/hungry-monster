@@ -57,4 +57,25 @@ body {
     grid-gap: 18px;
 }
 
-#menuDetail {}
+#menuDetail img {
+    justify-content: center;
+    margin: 0px 307px;
+    background-color: #f1f0f0;
+    border-radius: 43px;
+    height: 482px;
+}
+
+#menuDetail h1 {
+    font-weight: 700;
+    margin: 19px 309px;
+}
+
+#menuDetail h3 {
+    font-weight: 700;
+    margin: 19px 309px;
+}
+
+#menuDetail p {
+    font-weight: 700;
+    margin: 19px 309px;
+}

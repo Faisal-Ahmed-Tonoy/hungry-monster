@@ -8,6 +8,7 @@ document.getElementById('search-button').addEventListener('click', function() {
             alert(" Sorry,this item is not include in our menu!");
 
 
+
         });
 
 
@@ -56,6 +57,11 @@ const renderMenuInfo = menu => {
      <p>${menu.strIngredient4}</p>
      <p>${menu.strIngredient5}</p>
      <p>${menu.strIngredient6}</p>
+     <p>${menu.strIngredient7}</p>
+     <p>${menu.strIngredient8}</p>
+     <p>${menu.strIngredient9}</p>
+     <p>${menu.strIngredient10}</p>
+      
      
 `
 }
