@@ -19,7 +19,7 @@
            fetch(Url)
                .then(response => response.json())
                .then(data => displayMeal(data.meals))
-               .catch(error => displayError('Something Went Wrong!!! Please Try Again.'));
+               .catch(error => displayError('Something Went Wrong!!! Please Try Again'));
 
 
 
