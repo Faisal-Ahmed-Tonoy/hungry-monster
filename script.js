@@ -4,6 +4,10 @@
            document.getElementById('error').innerHTML = "";
            document.getElementById('menuDiv').innerHTML = "";
            document.getElementById('menuDetail').innerHTML = "";
+           if (document.getElementById("meal-input").value == "") {
+               document.getElementById('menuDiv').innerHtml.style.display = "none";
+
+           }
 
 
 
