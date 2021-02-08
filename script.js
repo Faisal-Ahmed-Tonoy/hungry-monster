@@ -3,6 +3,8 @@
           const mealInput = document.getElementById("meal-input").value;
           document.getElementById('error').innerHTML = "";
           document.getElementById('menuDiv').innerHTML = "";
+          document.getElementById('menuDetail').innerHTML = "";
+
           const Url = (`https://www.themealdb.com/api/json/v1/1/search.php?s=${mealInput}`)
           fetch(Url)
               .then(response => response.json())
