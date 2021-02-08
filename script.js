@@ -5,6 +5,9 @@
           document.getElementById('menuDiv').innerHTML = "";
           document.getElementById('menuDetail').innerHTML = "";
 
+
+
+
           const Url = (`https://www.themealdb.com/api/json/v1/1/search.php?s=${mealInput}`)
           fetch(Url)
               .then(response => response.json())
@@ -53,16 +56,16 @@
 <h1>${menu.strMeal}</h1>
 <h3>Ingredients</h3>
 <ul>
-<li> <i class="fa fa-check"></i>${menu.strIngredient1}</li>
-<li> <i class="fa fa-check"></i>${menu.strIngredient2}</li>
-<li> <i class="fa fa-check"></i>${menu.strIngredient3}</li>
-<li> <i class="fa fa-check"></i>${menu.strIngredient4}</li>
-<li> <i class="fa fa-check"></i>${menu.strIngredient5}</li>
-<li> <i class="fa fa-check"></i>${menu.strIngredient6}</li>
-<li> <i class="fa fa-check"></i>${menu.strIngredient7}</li>
-<li> <i class="fa fa-check"></i>${menu.strIngredient8}</li>
-<li> <i class="fa fa-check"></i>${menu.strIngredient9}</li>
-<li> <i class="fa fa-check"></i>${menu.strIngredient10}</li>
+<li> <i class="fa fa-check"></i>${menu.strMeasure1}${menu.strIngredient1}</li>
+<li> <i class="fa fa-check"></i>${menu.strMeasure2}${menu.strIngredient2}</li>
+<li> <i class="fa fa-check"></i>${menu.strMeasure3}${menu.strIngredient3}</li>
+<li> <i class="fa fa-check"></i>${menu.strMeasure4}${menu.strIngredient4}</li>
+<li> <i class="fa fa-check"></i>${menu.strMeasure5}${menu.strIngredient5}</li>
+<li> <i class="fa fa-check"></i>${menu.strMeasure6}${menu.strIngredient6}</li>
+<li> <i class="fa fa-check"></i>${menu.strMeasure7}${menu.strIngredient7}</li>
+<li> <i class="fa fa-check"></i>${menu.strMeasure8}${menu.strIngredient8}</li>
+<li> <i class="fa fa-check"></i>${menu.strMeasure9}${menu.strIngredient9}</li>
+<li> <i class="fa fa-check"></i>${menu.strMeasure10}${menu.strIngredient10}</li>
 <ul>`
   }
 
