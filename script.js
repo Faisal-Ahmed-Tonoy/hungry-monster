@@ -1,6 +1,8 @@
   //API fetch
   document.getElementById('search-button').addEventListener('click', function() {
           const mealInput = document.getElementById("meal-input").value;
+          document.getElementById('error').innerHTML = "";
+          document.getElementById('menuDiv').innerHTML = "";
           const Url = (`https://www.themealdb.com/api/json/v1/1/search.php?s=${mealInput}`)
           fetch(Url)
               .then(response => response.json())
@@ -65,4 +67,5 @@
   const displayError = error => {
       const errorTag = document.getElementById('error');
       errorTag.innerText = error;
+
   }
