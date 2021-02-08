@@ -6,10 +6,6 @@
            document.getElementById('menuDetail').innerHTML = "";
            if (document.getElementById("meal-input").value == "") {
                document.getElementById('menuDiv').innerHtml.style.display = "none";
-
-
-
-
            }
 
 
@@ -20,8 +16,6 @@
                .then(response => response.json())
                .then(data => displayMeal(data.meals))
                .catch(error => displayError('Something Went Wrong!!! Please Try Again'));
-
-
 
        })
        // Creating Div and Class
@@ -35,11 +29,8 @@
                menuDiv.className = 'menu-item';
                const menuIfo = ` 
 
-<img src="${meals.strMealThumb}" onclick="displayMenuDetail('${meals.strMeal}')">
-<h3 class='food-detail' >${meals.strMeal}</h3>
-
-
-`
+              <img src="${meals.strMealThumb}" onclick="displayMenuDetail('${meals.strMeal}')">
+              <h3 class='food-detail' >${meals.strMeal}</h3>`
                menuDiv.innerHTML = menuIfo;
                foodDiv.appendChild(menuDiv);
 
