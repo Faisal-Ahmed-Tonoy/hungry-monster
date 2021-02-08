@@ -6,6 +6,8 @@
            document.getElementById('menuDetail').innerHTML = "";
            if (document.getElementById("meal-input").value == "") {
                document.getElementById('menuDiv').innerHtml.style.display = "none";
+               document.getElementById('error').innerHTML.style.display = "block";
+
 
 
            }
@@ -47,7 +49,7 @@
        }
        //Ingredients Details
    const displayMenuDetail = names => {
-       const url = `https://www.themealdb.com/api/json/v1/1/list.php?i=list${names}`
+       const url = (`https://www.themealdb.com/api/json/v1/1/search.php?s=${names}`)
        fetch(url)
            .then(res => res.json())
            .then(data => renderMenuInfo(data.meals[0]));
