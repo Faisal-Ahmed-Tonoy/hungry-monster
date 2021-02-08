@@ -6,7 +6,7 @@
            document.getElementById('menuDetail').innerHTML = "";
            if (document.getElementById("meal-input").value == "") {
                document.getElementById('menuDiv').innerHtml.style.display = "none";
-               document.getElementById('error').innerHTML.style.display = "block";
+
 
 
 
