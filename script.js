@@ -8,9 +8,6 @@
                document.getElementById('menuDiv').innerHtml.style.display = "none";
            }
 
-
-
-
            const Url = (`https://www.themealdb.com/api/json/v1/1/search.php?s=${mealInput}`)
            fetch(Url)
                .then(response => response.json())
